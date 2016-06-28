@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">library</string>
+    <string name="swipe_left">swipe left</string>
+    <string name="swipe_right">swipe right</string>
+    <string name="stack_empty">no data now</string>
+    <string name="add_data">Add Data</string>
+</resources>
