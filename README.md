@@ -4,7 +4,7 @@ android swipe tool,
 this is a useful project support swipe gesture in your activity/fragment/other views.
 
 ## Demo##
-![demo Screen](ddddddddddddddddddddddddd)
+![demo Screen](https://github.com/CameloeAnthony/UltimateSwipeTool/blob/master/art/GIF.gif)
 
 ## QuickStart ##
 ### Include the Gradle dependency ###
