@@ -1,19 +1,35 @@
 # UltimateSwipeTool
 ----
 android swipe tool,
-this is a useful project support swipe gesture in your activity/fragment/other views.
+this is a useful project support swipe gesture in your activity/fragment/other views.(combine and recomb from some swipe Open-Source )
 
 ## Demo##
 ![demo Screen](https://github.com/CameloeAnthony/UltimateSwipeTool/blob/master/art/GIF.gif)
 
 ## QuickStart ##
-### Include the Gradle dependency ###
+#####Include the Gradle dependency
 
-```java
+```
 dependencies {
-    compile 'xxx'
+    update soon
 }
 ```
+## Thanks##
+[SwipeStack](https://github.com/flschweiger/SwipeStack)
+
+[SwipeBackActivity](https://github.com/CameloeAnthony/SwipeBackActivity)
+
+[AndroidSwipeLayout](https://github.com/daimajia/AndroidSwipeLayout)
+
+[SwipeAwayDialog](https://github.com/kakajika/SwipeAwayDialog)
+
+## About Me##
+
+EMail:[CameloeAnthony@gmail.com](CameloeAnthony@gmail.com)
+
+blog:[Anthony's blog](http://www.jianshu.com/users/44872eaffa8b)
+
+weibo:[Anthony's weibo](http://weibo.com/3288332304)
 
 ## Copyright##
 ``` 
