@@ -1,4 +1,4 @@
-package com.anthony.library.swipecard;
+package com.anthony.library.cards;
 
 /*
  * Copyright (C) 2016 Frederik Schweiger

@@ -1,4 +1,4 @@
-package com.anthony.library.swipefragment;
+package com.anthony.library.dialogFragment;
 
 import android.support.v4.app.DialogFragment;
 import android.view.View;

@@ -1,4 +1,4 @@
-package com.anthony.library.swipefragment;
+package com.anthony.library.dialogFragment;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;

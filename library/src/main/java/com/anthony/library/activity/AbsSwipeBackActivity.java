@@ -1,4 +1,4 @@
-package com.anthony.library.swipeactivity;
+package com.anthony.library.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -52,6 +52,12 @@ public class AbsSwipeBackActivity extends AppCompatActivity implements SwipeBack
 
         SwipeHelper.convertActivityToTranslucent(this);
         getSwipeBackLayout().scrollToFinishActivity();
+    }
+
+    @Override
+    public void setScrollDirection(int edgeFlags) {
+        int edgeFlag = edgeFlags;//SwipeBackLayout.EDGE_ALL| EDGE_LEFT | EDGE_RIGHT | EDGE_BOTTOM | EDGE_TOP
+        getSwipeBackLayout().setEdgeTrackingEnabled(edgeFlag);
     }
 
 }

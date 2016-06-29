@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.anthony.library.swipecard.SwipeCards;
+import com.anthony.library.cards.SwipeCards;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +21,8 @@ import butterknife.OnClick;
 /**
  * Created by Anthony on 2016/6/28.
  * Class Note:
+ * demo activity of swipe cards
+ *
  */
 public class DemoSwipeCardsActivity extends AppCompatActivity implements SwipeCards.SwipeCardsListener {
 

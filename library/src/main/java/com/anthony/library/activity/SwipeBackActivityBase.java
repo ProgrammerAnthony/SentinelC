@@ -1,4 +1,4 @@
-package com.anthony.library.swipeactivity;
+package com.anthony.library.activity;
 
 
 
@@ -21,5 +21,7 @@ public interface SwipeBackActivityBase {
      * Scroll out contentView and finish the activity
      */
     void scrollToFinishActivity();
+
+    void setScrollDirection(int edgeFlags);
 
 }

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.anthony.library.swipeactivity;
+package com.anthony.library.activity;
 
 import android.content.Context;
 import android.support.v4.view.MotionEventCompat;
@@ -31,11 +31,14 @@ import android.view.animation.Interpolator;
 import java.util.Arrays;
 
 /**
- * Create By Anthony on 2016/1/15
+ * Create By Anthony on 2016/6/15
  * Class Note:
  * ViewDragHelper is a utility class for writing custom ViewGroups.
  * It offers a number of useful operations and state tracking for allowing
  * a user to drag and reposition views within their parent ViewGroup.
+ *
+ * difference between {@link android.support.v4.widget.ViewDragHelper}
+ * ->add method{@link #setEdgeSize(int)} to support edge size set (to support vertical drag)
  */
 public class ViewDragHelper {
     private static final String TAG = "ViewDragHelper";

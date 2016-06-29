@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.anthony.library.swipecard.SwipeCards
+    <com.anthony.library.cards.SwipeCards
         android:id="@+id/swipeCards"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
