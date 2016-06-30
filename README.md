@@ -3,22 +3,20 @@
 android swipe tool,
 this is a useful project support swipe gesture in your activity/fragment/other views.(combine and recomb from some swipe Open-Source )
 
-## ScreenShoot##
-#####1 swipe dialog fragment
-![dialog_fragment_swipe](https://github.com/CameloeAnthony/UltimateSwipeTool/blob/master/art/dialog_fragment_swipe.gif)
-#####2 swipe activity
-![swipe_activity](https://github.com/CameloeAnthony/UltimateSwipeTool/blob/master/art/swipe_activity.gif)
-#####3 swipe cards
-![swipe_cards](https://github.com/CameloeAnthony/UltimateSwipeTool/blob/master/art/swipe_cards.gif)
+## Demo##
+![demo Screen](https://github.com/CameloeAnthony/UltimateSwipeTool/blob/master/art/GIF.gif)
 
 ## QuickStart ##
 #####Include the Gradle dependency
 
 ```
 dependencies {
-    update soon
+       compile "com.anthony.ultimateswipetool:library:1.0.1"
 }
 ```
+
+detail operation check in app module of UltimateSwipeTool.
+
 ## Thanks##
 [SwipeStack](https://github.com/flschweiger/SwipeStack)
 

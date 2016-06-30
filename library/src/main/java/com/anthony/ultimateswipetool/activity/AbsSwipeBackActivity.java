@@ -62,4 +62,5 @@ public class AbsSwipeBackActivity extends Activity implements SwipeBackActivityB
         getSwipeBackLayout().setEdgeTrackingEnabled(edgeFlag);
     }
 
+
 }

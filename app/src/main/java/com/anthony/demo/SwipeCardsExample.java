@@ -21,8 +21,6 @@ import butterknife.OnClick;
 /**
  * Created by Anthony on 2016/6/28.
  * Class Note:
- * demo activity of swipe cards
- *
  */
 public class SwipeCardsExample extends Activity implements SwipeCards.SwipeCardsListener {
 
