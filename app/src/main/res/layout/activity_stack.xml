@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.anthony.library.swipecard.SwipeCards
+    <com.anthony.library.cards.SwipeCards
         android:id="@+id/swipeCards"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
-        android:padding="@dimen/padding_swipestack"
+        android:padding="@dimen/padding_swipe_cards"
         app:stack_rotation="10"
         app:stack_size="3" />
 
@@ -42,6 +42,3 @@
         android:text="@string/add_data"/>
 </RelativeLayout>
 
-    <!--
-
-    -->

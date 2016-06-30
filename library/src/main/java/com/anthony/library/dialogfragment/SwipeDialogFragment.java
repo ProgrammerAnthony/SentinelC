@@ -1,5 +1,7 @@
-package com.anthony.library.swipefragment;
+package com.anthony.library.dialogfragment;
 
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +18,8 @@ public class SwipeDialogFragment extends DialogFragment {
     private boolean mSwipeable = true;
     private boolean mTiltEnabled = true;
     private boolean mSwipeLayoutGenerated = false;
-    private SwipeLayout swipeLayout;
+    private SwipeDialogLayout swipeDialogLayout;
+    private SwipeHelper swipeHelper;
     /**
      * Set whether dialog can be swiped away.
      */
@@ -36,8 +39,8 @@ public class SwipeDialogFragment extends DialogFragment {
      */
     public void setTiltEnabled(boolean tiltEnabled) {
         mTiltEnabled = tiltEnabled;
-        if(swipeLayout!=null){
-            swipeLayout.setTiltEnabled(tiltEnabled);
+        if(swipeDialogLayout !=null){
+            swipeDialogLayout.setTiltEnabled(tiltEnabled);
         }
     }
 
@@ -57,19 +60,25 @@ public class SwipeDialogFragment extends DialogFragment {
     }
 
 
+
+
     @Override
     public void onStart() {
         super.onStart();
+        onDialogFragmentStart();
+    }
 
+    private void onDialogFragmentStart() {
         if (!mSwipeLayoutGenerated && getShowsDialog()) {
+
             Window window = getDialog().getWindow();
             ViewGroup decorView = (ViewGroup)window.getDecorView();
 
-            swipeLayout =new SwipeLayout(getActivity());
+            swipeDialogLayout =new SwipeDialogLayout(getActivity());
 
-            SwipeHelper.replaceContentView(window,swipeLayout);
+            SwipeHelper.replaceContentView(window, swipeDialogLayout);
 
-            swipeLayout.addSwipeListener(decorView,"layout",new SwipeLayout.DismissCallbacks() {
+            swipeDialogLayout.addSwipeListener(decorView,"layout",new SwipeDialogLayout.DismissCallbacks() {
                 @Override
                 public boolean canDismiss(Object token) {
                     return isCancelable() && mSwipeable;
@@ -83,8 +92,8 @@ public class SwipeDialogFragment extends DialogFragment {
                 }
             });
 
-            swipeLayout.setTiltEnabled(mTiltEnabled);
-            swipeLayout.setClickable(true);
+            swipeDialogLayout.setTiltEnabled(mTiltEnabled);
+            swipeDialogLayout.setClickable(true);
 
             mSwipeLayoutGenerated = true;
         }

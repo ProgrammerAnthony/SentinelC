@@ -3,16 +3,16 @@ package com.anthony.library;
 import android.animation.Animator;
 import android.app.Activity;
 import android.app.ActivityOptions;
+import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 
-import com.anthony.library.swipeactivity.SwipeBackLayout;
-import com.anthony.library.swipefragment.SwipeLayout;
+import com.anthony.library.activity.SwipeBackLayout;
+import com.anthony.library.dialogfragment.SwipeDialogLayout;
 
 import java.lang.reflect.Method;
 
@@ -22,30 +22,41 @@ import java.lang.reflect.Method;
  * helper/util class to process swipe
  */
 public class SwipeHelper {
+
+    public SwipeHelper(Activity activity) {
+        mActivity = activity;
+    }
+
+    /*-----------------methods & fields for swipe dialog fragment-----------------------------------*/
+
     /**
-     *  1) using window to get DecorView ,
-     *  2) remove content view of DecorView,
-     *  3) replace with new content
-     * @param window current window
+     * 1) using window to get DecorView ,
+     * 2) remove content view of DecorView,
+     * 3) replace with new content
+     *
+     * @param window         current window
      * @param newContentView new content viewGroup
      */
     public static void replaceContentView(Window window, ViewGroup newContentView) {
-        ViewGroup decorView = (ViewGroup)window.getDecorView();
+        ViewGroup decorView = (ViewGroup) window.getDecorView();
         View content = decorView.getChildAt(0);
         decorView.removeView(content);
         newContentView.addView(content);
         decorView.addView(newContentView);
     }
 
+/*-----------------methods & fields for swipe cards-----------------------------*/
+
     /**
      * listener on animation end ,
      * implements of this class must Override method onAnimationEnd
      */
-    public static abstract class AnimationEndListener implements Animator.AnimatorListener{
+    public static abstract class AnimationEndListener implements Animator.AnimatorListener {
         @Override
         public void onAnimationStart(Animator animation) {
 
         }
+
         @Override
         public void onAnimationCancel(Animator animation) {
 
@@ -58,20 +69,21 @@ public class SwipeHelper {
 
     }
 
+    /*--------------methods & fields for activity swipe back----------------------*/
     private Activity mActivity;
 
     private SwipeBackLayout mSwipeBackLayout;
 
-    public SwipeHelper(Activity activity) {
-        mActivity = activity;
-    }
+
 
     @SuppressWarnings("deprecation")
     public void onActivityCreate() {
         mActivity.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         mActivity.getWindow().getDecorView().setBackgroundDrawable(null);
-        mSwipeBackLayout = (SwipeBackLayout) LayoutInflater.from(mActivity).inflate(
-                R.layout.swipeback_layout, null);
+        mSwipeBackLayout = new SwipeBackLayout(mActivity);
+        ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        mSwipeBackLayout.setLayoutParams(params);
+
         mSwipeBackLayout.addSwipeListener(new SwipeBackLayout.SwipeListener() {
             @Override
             public void onScrollStateChange(int state, float scrollPercent) {
@@ -161,7 +173,7 @@ public class SwipeHelper {
             Method method = Activity.class.getDeclaredMethod("convertToTranslucent",
                     translucentConversionListenerClazz);
             method.setAccessible(true);
-            method.invoke(activity, new Object[] {
+            method.invoke(activity, new Object[]{
                     null
             });
         } catch (Throwable t) {

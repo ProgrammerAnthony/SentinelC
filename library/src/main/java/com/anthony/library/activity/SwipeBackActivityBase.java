@@ -1,5 +1,4 @@
-package com.anthony.library.swipeactivity;
-
+package com.anthony.library.activity;
 
 
 /**
@@ -10,9 +9,9 @@ package com.anthony.library.swipeactivity;
  */
 public interface SwipeBackActivityBase {
     /**
-     *the SwipeBackLayout associated with this activity.
+     * the SwipeBackLayout associated with this activity.
      */
-   SwipeBackLayout getSwipeBackLayout();
+    SwipeBackLayout getSwipeBackLayout();
 
 
     void setSwipeBackEnable(boolean enable);
@@ -22,4 +21,5 @@ public interface SwipeBackActivityBase {
      */
     void scrollToFinishActivity();
 
+    void setScrollDirection(int edgeFlags);
 }

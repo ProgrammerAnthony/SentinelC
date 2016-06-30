@@ -1,4 +1,4 @@
-package com.anthony.library.swipefragment;
+package com.anthony.library.dialogfragment;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -20,7 +20,8 @@ import com.anthony.library.R;
  * 1 using view property animation to process swipe animation,
  * 2 process touch event  in {@link #onTouch(View, MotionEvent)}
  */
-public class SwipeLayout extends FrameLayout implements View.OnTouchListener {
+public class SwipeDialogLayout extends FrameLayout implements View.OnTouchListener {
+
     // Cached ViewConfiguration and system-wide constant values
     private int mSlop;
     private int mMinFlingVelocity;
@@ -44,20 +45,17 @@ public class SwipeLayout extends FrameLayout implements View.OnTouchListener {
     private float mTranslationX;
 
     private boolean mTiltEnabled = true;
-
-    private View mContentView;
-
     private Context mContext;
 
-    public SwipeLayout(Context context) {
+    public SwipeDialogLayout(Context context) {
         this(context, null);
     }
 
-    public SwipeLayout(Context context, AttributeSet attrs) {
+    public SwipeDialogLayout(Context context, AttributeSet attrs) {
         this(context, attrs, R.attr.SwipeBackLayoutStyle);
     }
 
-    public SwipeLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+    public SwipeDialogLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         this.mContext = context;
         init();
@@ -75,7 +73,7 @@ public class SwipeLayout extends FrameLayout implements View.OnTouchListener {
     }
 
     /**
-     * The callback interface used by {@link SwipeLayout}
+     * The callback interface used by {@link SwipeDialogLayout}
      * to inform its client about a successful dismissal of the view for which it was created.
      */
     public interface DismissCallbacks {

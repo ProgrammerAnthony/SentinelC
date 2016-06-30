@@ -11,7 +11,3 @@
         android:layout_centerInParent="true"
         android:textSize="25sp" />
 </RelativeLayout>
-
-    <!--
-
-    -->

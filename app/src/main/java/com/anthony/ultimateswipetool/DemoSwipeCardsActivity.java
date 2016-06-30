@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.anthony.library.swipecard.SwipeCards;
+import com.anthony.library.cards.SwipeCards;
 
 import java.util.ArrayList;
 import java.util.List;

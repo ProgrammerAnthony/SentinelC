@@ -21,7 +21,8 @@
 
         <activity android:name=".DemoSwipeCardsActivity"/>
 
-        <activity android:name=".DemoSwipeBackActivity"/>
+        <activity android:name=".DemoSwipeBackActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

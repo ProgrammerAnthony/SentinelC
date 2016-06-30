@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 
-import com.anthony.library.swipefragment.SwipeDialogFragment;
+import com.anthony.library.dialogfragment.SwipeDialogFragment;
 
 /**
  * Created by Anthony on 2016/6/28.

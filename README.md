@@ -11,9 +11,12 @@ this is a useful project support swipe gesture in your activity/fragment/other v
 
 ```
 dependencies {
-    update soon
+       compile "com.anthony.ultimateswipetool:library:1.0.1"
 }
 ```
+
+detail operation check in app module of UltimateSwipeTool.
+
 ## Thanks##
 [SwipeStack](https://github.com/flschweiger/SwipeStack)
 
