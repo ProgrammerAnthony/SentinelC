@@ -136,6 +136,7 @@ public class SwipeItemMangerImpl implements SwipeItemMangerInterface {
         }
     }
 
+
     class ValueBox {
         OnLayoutListener onLayoutListener;
         SwipeMemory swipeMemory;

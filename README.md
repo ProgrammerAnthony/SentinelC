@@ -3,22 +3,29 @@
 android swipe tool,
 this is a useful project support swipe gesture in your activity/fragment/other views.(combine and recomb from some swipe Open-Source )
 
+对网络上的几个开源库进行整理，修改部分效果以及代码，并以简单的demo进行呈现。一款功能强大的滑动库，目前支持dialog fragment，activity，卡片，listView，RecyclerView，GridView等的滑动。
+
+
 ## ScreenShoot##
 
 #####1 swipe dialog fragment
-![dialog_fragment_swipe](https://github.com/CameloeAnthony/UltimateSwipeTool/blob/master/art/dialog_fragment_swipe.gif)
+![dialog_fragment_swipe](https://github.com/CameloeAnthony/UltimateSwipeTool/blob/master/art/fragment.gif)
 
 #####2 swipe activity
-![swipe_activity](https://github.com/CameloeAnthony/UltimateSwipeTool/blob/master/art/swipe_activity.gif)
+![swipe_activity](https://github.com/CameloeAnthony/UltimateSwipeTool/blob/master/art/activity.gif)
 
 #####3 swipe cards
-![swipe_cards](https://github.com/CameloeAnthony/UltimateSwipeTool/blob/master/art/swipe_cards.gif)
+![swipe_cards](https://github.com/CameloeAnthony/UltimateSwipeTool/blob/master/art/cards.gif)
 
 ####4 swipe listview
+![swipe_cards](https://github.com/CameloeAnthony/UltimateSwipeTool/blob/master/art/listview.gif)
 
-####5 swipe gridview
+####5 swipe recyclerview
+![swipe_cards](https://github.com/CameloeAnthony/UltimateSwipeTool/blob/master/art/recyclerview.gif)
 
-####6 swipe recyclerview
+####6 swipe gridview
+![swipe_cards](https://github.com/CameloeAnthony/UltimateSwipeTool/blob/master/art/gridview.gif)
+
 
 
 
@@ -27,7 +34,7 @@ this is a useful project support swipe gesture in your activity/fragment/other v
 
 ```
 dependencies {
-    update soon
+   compile 'com.anthony.ultimateswipetool:library:1.0.1'
 }
 ```
 ## Thanks##

@@ -19,7 +19,7 @@ public abstract class BaseSwipeAdapter extends BaseAdapter implements SwipeItemM
 
     /**
      * return the {@link com.anthony.ultimateswipetool.view.SwipeViewLayout} resource id, int the view item.
-     * @param position
+     * @param resourceId
      * @return
      */
     public abstract int getSwipeLayoutResourceId(int position);

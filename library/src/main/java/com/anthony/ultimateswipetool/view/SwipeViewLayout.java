@@ -1577,6 +1577,9 @@ public class SwipeViewLayout extends FrameLayout {
         mSwipeListeners.clear();
     }
 
+    public void setOnDoubleClickListener(DoubleClickListener doubleClickListener) {
+        mDoubleClickListener = doubleClickListener;
+    }
     /**
      * double click listener
      */

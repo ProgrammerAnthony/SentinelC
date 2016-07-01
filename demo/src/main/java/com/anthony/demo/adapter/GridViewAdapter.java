@@ -1,9 +1,12 @@
 package com.anthony.demo.adapter;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.anthony.demo.R;
 import com.anthony.ultimateswipetool.view.adapter.BaseSwipeAdapter;
 
 /**
@@ -19,22 +22,23 @@ public class GridViewAdapter extends BaseSwipeAdapter {
     }
     @Override
     public int getSwipeLayoutResourceId(int position) {
-        return 0;
+        return R.id.swipe;
     }
 
     @Override
     public View generateView(int position, ViewGroup parent) {
-        return null;
+        return LayoutInflater.from(mContext).inflate(R.layout.view_item, null);
     }
 
     @Override
     public void fillValues(int position, View convertView) {
-
+        TextView t = (TextView)convertView.findViewById(R.id.position);
+        t.setText((position + 1) + ".");
     }
 
     @Override
     public int getCount() {
-        return 0;
+        return 10;
     }
 
     @Override
@@ -44,6 +48,6 @@ public class GridViewAdapter extends BaseSwipeAdapter {
 
     @Override
     public long getItemId(int position) {
-        return 0;
+        return position;
     }
 }
