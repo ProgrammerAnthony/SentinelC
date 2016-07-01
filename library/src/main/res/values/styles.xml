@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--activity-->
+    <style name="UST_SwipeBackLayout">
+        <item name="UST_edge_size">50dip</item>
+        <item name="UST_shadow_left">@drawable/shadow_left</item>
+        <item name="UST_shadow_right">@drawable/shadow_right</item>
+        <item name="UST_shadow_bottom">@drawable/shadow_bottom</item>
+        <item name="UST_shadow_top">@drawable/shadow_top</item>
+    </style>
+</resources>

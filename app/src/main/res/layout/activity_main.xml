@@ -5,32 +5,72 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/btn_show_fragment"
+        android:id="@+id/dialog_fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="show swipe dialog fragment"
+        android:text="dialog fragment"
         android:textSize="18sp" />
 
     <Button
-        android:id="@+id/btn_show_activity"
+        android:id="@+id/activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn_show_fragment"
+        android:layout_below="@id/dialog_fragment"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="show swipe back activity"
+        android:text="activity"
         android:textSize="18sp" />
 
     <Button
-        android:id="@+id/btn_show_swipe_cards"
+        android:id="@+id/cards"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn_show_activity"
+        android:layout_below="@id/activity"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="show swipe cards like Tinder"
+        android:text="cards"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/listView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cards"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="listview"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/recyclerview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/listView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="recyclerview"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/gridview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recyclerview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="gridview"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/continue_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gridview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="......"
         android:textSize="18sp" />
 </RelativeLayout>
 
