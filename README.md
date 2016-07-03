@@ -1,5 +1,10 @@
 # UltimateSwipeTool
 ----
+[![Download](https://api.bintray.com/packages/cameloeanthony/maven/ultimateswipetool/images/download.svg)](https://bintray.com/cameloeanthony/maven/ultimateswipetool/_latestVersion)
+[![license](http://img.shields.io/badge/license-apache_2.0-blue.svg?style=flat)](https://github.com/CameloeAnthony/UltimateSwipeTool/blob/master/LICENSE)
+[ ![platform](https://camo.githubusercontent.com/e30009828bc4d989853a3a710873c96030167ba8/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f706c6174666f726d2d616e64726f69642d677265656e2e737667) ](https://bintray.com/cameloeanthony/maven/ultimateswipetool/_latestVersion)
+[![API](https://img.shields.io/badge/API-14%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=14)
+
 android swipe tool,
 this is a useful project support swipe gesture in your activity/fragment/other views.(combine and recomb from some swipe Open-Source )
 
