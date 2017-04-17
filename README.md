@@ -13,29 +13,29 @@ this is a useful project support swipe gesture in your activity/fragment/other v
 
 ## ScreenShoot##
 
-#####1 swipe dialog fragment
+##### 1 swipe dialog fragment
 ![dialog_fragment_swipe](https://github.com/CameloeAnthony/UltimateSwipeTool/blob/master/art/fragment.gif)
 
-#####2 swipe activity
+##### 2 swipe activity
 ![swipe_activity](https://github.com/CameloeAnthony/UltimateSwipeTool/blob/master/art/activity.gif)
 
-#####3 swipe cards
+##### 3 swipe cards
 ![swipe_cards](https://github.com/CameloeAnthony/UltimateSwipeTool/blob/master/art/cards.gif)
 
-####4 swipe listview
+#### 4 swipe listview
 ![swipe_cards](https://github.com/CameloeAnthony/UltimateSwipeTool/blob/master/art/listview.gif)
 
-####5 swipe recyclerview
+#### 5 swipe recyclerview
 ![swipe_cards](https://github.com/CameloeAnthony/UltimateSwipeTool/blob/master/art/recyclerview.gif)
 
-####6 swipe gridview
+#### 6 swipe gridview
 ![swipe_cards](https://github.com/CameloeAnthony/UltimateSwipeTool/blob/master/art/gridview.gif)
 
 
 
 
 ## QuickStart ##
-#####Include the Gradle dependency
+##### Include the Gradle dependency
 
 ```
 dependencies {
