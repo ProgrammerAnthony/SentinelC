@@ -4,7 +4,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-
 import com.anthony.ultimateswipetool.view.Attributes;
 import com.anthony.ultimateswipetool.view.SwipeItemMangerImpl;
 import com.anthony.ultimateswipetool.view.SwipeViewLayout;
@@ -19,7 +18,7 @@ public abstract class BaseSwipeAdapter extends BaseAdapter implements SwipeItemM
 
     /**
      * return the {@link com.anthony.ultimateswipetool.view.SwipeViewLayout} resource id, int the view item.
-     * @param resourceId
+     * @param position
      * @return
      */
     public abstract int getSwipeLayoutResourceId(int position);

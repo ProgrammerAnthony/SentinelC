@@ -20,7 +20,6 @@ import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
 
-
 import com.anthony.ultimateswipetool.R;
 
 import java.lang.reflect.Method;
@@ -950,7 +949,7 @@ public class SwipeViewLayout extends FrameLayout {
     /***
      * Returns the percentage of revealing at which the view below should the view finish opening
      * if it was already open before dragging
-     * @returns  The percentage of view revealed to trigger, default value is 0.25
+     * @return mWillOpenPercentAfterOpen The percentage of view revealed to trigger, default value is 0.25
      */
     public float getWillOpenPercentAfterOpen() {
         return mWillOpenPercentAfterOpen;
@@ -967,7 +966,7 @@ public class SwipeViewLayout extends FrameLayout {
     /***
      * Returns the percentage of revealing at which the view below should the view finish opening
      * if it was already closed before dragging
-     * @returns  The percentage of view revealed to trigger, default value is 0.25
+     * @return The percentage of view revealed to trigger, default value is 0.25
      */
     public float getWillOpenPercentAfterClose() {
         return mWillOpenPercentAfterClose;
