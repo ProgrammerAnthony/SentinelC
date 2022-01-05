@@ -58,6 +58,7 @@ final class ResourceMetadataRegistry {
         DEFAULT_FALLBACK_MAP.put(getKey(clazz, name), MethodWrapper.wrap(method));
     }
 
+
     static void updateBlockHandlerFor(Class<?> clazz, String name, Method method) {
         if (clazz == null || StringUtil.isBlank(name)) {
             throw new IllegalArgumentException("Bad argument");
