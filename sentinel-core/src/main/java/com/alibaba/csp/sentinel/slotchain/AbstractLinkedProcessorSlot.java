@@ -23,6 +23,7 @@ import com.alibaba.csp.sentinel.context.Context;
  */
 public abstract class AbstractLinkedProcessorSlot<T> implements ProcessorSlot<T> {
 
+    //指向下一个节点
     private AbstractLinkedProcessorSlot<?> next = null;
 
     @Override

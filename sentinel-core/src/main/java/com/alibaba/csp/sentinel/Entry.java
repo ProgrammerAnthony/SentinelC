@@ -42,7 +42,7 @@ import com.alibaba.csp.sentinel.context.Context;
  * the current entry in the invocation tree, every {@link Entry#exit()} call should modify
  * {@link Context#setCurEntry(Entry)} as parent entry of this.
  * </p>
- *
+ * 节点在职责链中流转
  * @author qinan.qn
  * @author jialiang.linjl
  * @author leyou(lihao)

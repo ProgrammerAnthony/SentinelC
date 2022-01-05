@@ -29,7 +29,7 @@ import java.lang.reflect.Method;
 
 /**
  * Aspect for methods with {@link SentinelResource} annotation.
- *
+ * 切面类处理 {@link SentinelResource}注解
  * @author Eric Zhao
  */
 @Aspect
@@ -42,7 +42,7 @@ public class SentinelResourceAspect extends AbstractSentinelAspectSupport {
     @Around("sentinelResourceAnnotationPointcut()")
     public Object invokeResourceWithSentinel(ProceedingJoinPoint pjp) throws Throwable {
         Method originMethod = resolveMethod(pjp);
-
+        //1 注解解析
         SentinelResource annotation = originMethod.getAnnotation(SentinelResource.class);
         if (annotation == null) {
             // Should not go through here.
@@ -53,6 +53,7 @@ public class SentinelResourceAspect extends AbstractSentinelAspectSupport {
         int resourceType = annotation.resourceType();
         Entry entry = null;
         try {
+            //统计和资源规则检查的入口是SphU.entry
             entry = SphU.entry(resourceName, resourceType, entryType, pjp.getArgs());
             return pjp.proceed();
         } catch (BlockException ex) {

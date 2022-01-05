@@ -28,7 +28,7 @@ import java.util.List;
 
 /**
  * Builder for a default {@link ProcessorSlotChain}.
- *
+ * 使用spi机制构建ProcessorSlotChain
  * @author qinan.qn
  * @author leyou
  */

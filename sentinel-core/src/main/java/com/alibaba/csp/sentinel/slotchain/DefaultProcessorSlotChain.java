@@ -20,6 +20,7 @@ import com.alibaba.csp.sentinel.context.Context;
 /**
  * @author qinan.qn
  * @author jialiang.linjl
+ * 职责链
  */
 public class DefaultProcessorSlotChain extends ProcessorSlotChain {
 
@@ -50,6 +51,7 @@ public class DefaultProcessorSlotChain extends ProcessorSlotChain {
 
     @Override
     public void addLast(AbstractLinkedProcessorSlot<?> protocolProcessor) {
+        //链表添加尾节点
         end.setNext(protocolProcessor);
         end = protocolProcessor;
     }

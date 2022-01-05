@@ -19,7 +19,7 @@ import java.lang.annotation.*;
 
 /**
  * Annotation for Provider class of SPI.
- *
+ * spi机制
  * @see SpiLoader
  * @author cdfive
  */
