@@ -43,7 +43,7 @@ import com.alibaba.csp.sentinel.spi.Spi;
  * One resource has only one cluster node, while one resource can have multiple
  * default nodes.
  * </p>
- *
+ * 此插槽用于构建资源的 ClusterNode 以及调用来源节点。ClusterNode 保持资源运行统计信息（响应时间、QPS、block 数目、线程数、异常数等）以及原始调用者统计信息列表。来源调用者的名字由 ContextUtil.enter(contextName，origin) 中的 origin 标记。
  * @author jialiang.linjl
  */
 @Spi(isSingleton = false, order = Constants.ORDER_CLUSTER_BUILDER_SLOT)

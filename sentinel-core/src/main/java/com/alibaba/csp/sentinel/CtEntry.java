@@ -28,7 +28,7 @@ import com.alibaba.csp.sentinel.util.function.BiConsumer;
 
 /**
  * Linked entry within current context.
- *
+ * 在调用 SphU.entry(xxx) 的时候创建，Linked entry within current context.
  * @author jialiang.linjl
  * @author Eric Zhao
  */

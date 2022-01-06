@@ -30,7 +30,7 @@ import com.alibaba.csp.sentinel.spi.Spi;
 
 /**
  * A {@link ProcessorSlot} dedicates to circuit breaking.
- *
+ * 这个 slot 主要针对资源的平均响应时间（RT）以及异常比率，来决定资源是否在接下来的时间被自动熔断掉。
  * @author Carpenter Lee
  * @author Eric Zhao
  */

@@ -44,7 +44,7 @@ import com.alibaba.csp.sentinel.slots.block.BlockException;
  * <li>Finally, the sum statistics of all entrances.</li>
  * </ul>
  * </p>
- *
+ * 用于统计实时的调用数据。
  * @author jialiang.linjl
  * @author Eric Zhao
  */

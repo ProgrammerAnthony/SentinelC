@@ -20,6 +20,7 @@ import com.alibaba.csp.sentinel.context.Context;
 /**
  * @author qinan.qn
  * @author jialiang.linjl
+ * 链表抽象实现
  */
 public abstract class AbstractLinkedProcessorSlot<T> implements ProcessorSlot<T> {
 

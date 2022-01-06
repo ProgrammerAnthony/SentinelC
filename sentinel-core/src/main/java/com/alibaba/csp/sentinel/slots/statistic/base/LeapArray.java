@@ -32,7 +32,7 @@ import com.alibaba.csp.sentinel.util.TimeUtil;
  * and the total time span is {@link #intervalInMs}, so the total bucket amount is:
  * {@code sampleCount = intervalInMs / windowLengthInMs}.
  * </p>
- *
+ * Sentinel 底层采用高性能的滑动窗口数据结构 LeapArray 来统计实时的秒级指标数据，可以很好地支撑写多于读的高并发场景。
  * @param <T> type of statistic data
  * @author jialiang.linjl
  * @author Eric Zhao

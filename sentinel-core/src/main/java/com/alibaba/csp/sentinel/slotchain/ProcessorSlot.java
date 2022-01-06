@@ -19,7 +19,7 @@ import com.alibaba.csp.sentinel.context.Context;
 
 /**
  * A container of some process and ways of notification when the process is finished.
- * slot 机制，职责链
+ * slot 机制，职责链，定义抽象接口
  * @author qinan.qn
  * @author jialiang.linjl
  * @author leyou(lihao)
