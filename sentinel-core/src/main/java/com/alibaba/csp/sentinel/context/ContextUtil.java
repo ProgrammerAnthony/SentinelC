@@ -102,7 +102,7 @@ public class ContextUtil {
      * <p>
      * Same resource in different context will count separately, see {@link NodeSelectorSlot}.
      * </p>
-     *
+     * 每个线程都有其 {@link Context}，此方法标记invocation chain 的入口，每个resource对应有不同的一组资源
      * @param name   the context name
      * @param origin the origin of this invocation, usually the origin could be the Service
      *               Consumer's app name. The origin is useful when we want to control different
