@@ -25,7 +25,7 @@ import com.alibaba.csp.sentinel.util.StringUtil;
 
 /**
  * <p>Global config and callback registry of Dubbo legacy adapter.</p>
- *
+ * 适配dubbo，提供了fallback等dubbo异常处理参数
  * @author lianglin
  * @author Eric Zhao
  * @since 1.7.0

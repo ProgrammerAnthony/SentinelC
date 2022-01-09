@@ -22,6 +22,7 @@ import com.alibaba.dubbo.rpc.Invoker;
 
 /**
  * @author leyou
+ * 继承自dubbo的filter，子类实现分为consumer和provider，统计方法名和访问，子类实现会被sentinel的SPI加载机制加载
  */
 abstract class AbstractDubboFilter implements Filter {
 

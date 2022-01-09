@@ -34,7 +34,7 @@ import static com.alibaba.dubbo.common.Constants.PROVIDER;
 
 /**
  * <p>Dubbo service provider filter for Sentinel. Auto activated by default.</p>
- *
+ * dubbo服务提供者，会通过SPI机制被sentinel加载进dubbo，
  * If you want to disable the provider filter, you can configure:
  * <pre>
  * &lt;dubbo:provider filter="-sentinel.dubbo.provider.filter"/&gt;

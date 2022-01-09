@@ -33,7 +33,7 @@ import static com.alibaba.dubbo.common.Constants.CONSUMER;
 
 /**
  * <p>Dubbo service consumer filter for Sentinel. Auto activated by default.</p>
- *
+ * dubbo的服务消费者，会通过SPI机制被sentinel加载进dubbo，
  * If you want to disable the consumer filter, you can configure:
  * <pre>
  * &lt;dubbo:consumer filter="-sentinel.dubbo.consumer.filter"/&gt;

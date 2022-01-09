@@ -28,7 +28,7 @@ import static com.alibaba.dubbo.common.Constants.CONSUMER;
 
 /**
  * Puts current consumer's application name in the attachment of each invocation.
- *
+ * shi
  * @author Eric Zhao
  */
 @Activate(group = CONSUMER)
