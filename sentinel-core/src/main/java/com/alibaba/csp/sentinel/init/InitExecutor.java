@@ -25,7 +25,7 @@ import com.alibaba.csp.sentinel.spi.SpiLoader;
 
 /**
  * Load registered init functions and execute in order.
- *
+ * 初始化方法，用于用户拓展{@link InitFunc}
  * @author Eric Zhao
  */
 public final class InitExecutor {

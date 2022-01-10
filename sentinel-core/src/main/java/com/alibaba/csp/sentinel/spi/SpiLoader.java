@@ -73,12 +73,13 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public final class SpiLoader<S> {
 
     // Default path for the folder of Provider configuration file
+    //默认加载"META-INF/services/下的文件
     private static final String SPI_FILE_PREFIX = "META-INF/services/";
 
     // Cache the SpiLoader instances, key: classname of Service, value: SpiLoader instance
     private static final ConcurrentHashMap<String, SpiLoader> SPI_LOADER_MAP = new ConcurrentHashMap<>();
 
-    // Cache the classes of Provider
+    // Cache the classes of Provider 缓存 provider 类
     private final List<Class<? extends S>> classList = Collections.synchronizedList(new ArrayList<Class<? extends S>>());
 
     // Cache the sorted classes of Provider
@@ -463,7 +464,7 @@ public final class SpiLoader<S> {
 
     /**
      * Create Provider instance
-     * 获取缓存中的class，并更具service是否是单例进行创建
+     * 获取缓存中的class，并根据service是否是单例进行创建
      * @param clazz     class type of Provider
      * @param singleton if instance is singleton or prototype
      * @return Provider instance

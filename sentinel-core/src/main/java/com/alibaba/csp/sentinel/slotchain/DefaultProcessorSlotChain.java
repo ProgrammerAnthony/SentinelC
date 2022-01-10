@@ -20,7 +20,7 @@ import com.alibaba.csp.sentinel.context.Context;
 /**
  * @author qinan.qn
  * @author jialiang.linjl
- * 职责链
+ * 职责链，添加首尾节点
  */
 public class DefaultProcessorSlotChain extends ProcessorSlotChain {
 

@@ -51,7 +51,7 @@ public final class SentinelConfigLoader {
     }
 
     private static void load() {
-        // Order: system property -> system env -> default file (classpath:sentinel.properties) -> legacy path
+        // 加载顺序！！！: system property -> system env -> default file (classpath:sentinel.properties) -> legacy path
         String fileName = System.getProperty(SENTINEL_CONFIG_PROPERTY_KEY);
         if (StringUtil.isBlank(fileName)) {
             fileName = System.getenv(SENTINEL_CONFIG_ENV_KEY);

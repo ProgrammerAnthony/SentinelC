@@ -27,7 +27,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * The universal local configuration center of Sentinel. The config is retrieved from command line arguments
  * and customized properties file by default.
- *
+ * 全局sentinel配置，主要从命令行和properties文件中加载
  * @author leyou
  * @author Eric Zhao
  * @author Lin Liang

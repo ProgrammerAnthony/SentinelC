@@ -29,7 +29,7 @@ import com.alibaba.csp.sentinel.util.function.Predicate;
 
 /**
  * The basic metric class in Sentinel using a {@link BucketLeapArray} internal.
- *
+ * 使用高性能的滑动窗口数据结构 LeapArray 来统计实时的秒级指标数据
  * @author jialiang.linjl
  * @author Eric Zhao
  */

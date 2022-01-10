@@ -95,6 +95,7 @@ public class ModifyRulesCommandHandler implements CommandHandler<String> {
             return CommandResponse.ofSuccess(result);
         } else if (SYSTEM_RULE_TYPE.equalsIgnoreCase(type)) {
             List<SystemRule> rules = JSONArray.parseArray(data, SystemRule.class);
+            //加载对应规则
             SystemRuleManager.loadRules(rules);
             if (!writeToDataSource(getSystemSource(), rules)) {
                 result = WRITE_DS_FAILURE_MSG;

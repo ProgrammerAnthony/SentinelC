@@ -33,7 +33,7 @@ import com.alibaba.csp.sentinel.util.function.Predicate;
  * <li>metrics in minute level ({@code rollingCounterInMinute})</li>
  * <li>thread count</li>
  * </ol>
- *
+ * 实时统计
  * <p>
  * Sentinel use sliding window to record and count the resource statistics in real-time.
  * The sliding window infrastructure behind the {@link ArrayMetric} is {@code LeapArray}.
@@ -99,6 +99,7 @@ public class StatisticNode implements Node {
     /**
      * Holds statistics of the recent 60 seconds. The windowLengthInMs is deliberately set to 1000 milliseconds,
      * meaning each bucket per second, in this way we can get accurate statistics of each second.
+     * 获取60s的统计数据，窗口大小设置为了1000毫秒
      */
     private transient Metric rollingCounterInMinute = new ArrayMetric(60, 60 * 1000, false);
 

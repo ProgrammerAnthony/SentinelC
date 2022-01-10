@@ -47,6 +47,7 @@ public class DefaultNode extends StatisticNode {
 
     /**
      * The list of all child nodes.
+     * 所有子节点
      */
     private volatile Set<Node> childList = new HashSet<>();
 

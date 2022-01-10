@@ -26,10 +26,11 @@ import com.alibaba.csp.sentinel.util.AssertUtil;
 
 /**
  * <p>
- * This class stores summary runtime statistics of the resource, including rt, thread count, qps
+ * This class stores summary runtime statistics of the resource, including rt（response time）, thread count, qps
  * and so on. Same resource shares the same {@link ClusterNode} globally, no matter in which
  * {@link com.alibaba.csp.sentinel.context.Context}.
  * </p>
+ * 相同的resource对应全局相同的ClusterNode
  * <p>
  * To distinguish invocation from different origin (declared in
  * {@link ContextUtil#enter(String name, String origin)}),

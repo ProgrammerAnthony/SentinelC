@@ -53,8 +53,9 @@ public class SentinelResourceAspect extends AbstractSentinelAspectSupport {
         int resourceType = annotation.resourceType();
         Entry entry = null;
         try {
-            //统计和资源规则检查的入口是SphU.entry
+            //2 所有统计和资源规则检查的入口是SphU.entry
             entry = SphU.entry(resourceName, resourceType, entryType, pjp.getArgs());
+            //3 具体调用对应方法
             return pjp.proceed();
         } catch (BlockException ex) {
             return handleBlockException(pjp, annotation, ex);
@@ -73,6 +74,7 @@ public class SentinelResourceAspect extends AbstractSentinelAspectSupport {
             throw ex;
         } finally {
             if (entry != null) {
+                //资源记录退出
                 entry.exit(1, pjp.getArgs());
             }
         }

@@ -38,6 +38,7 @@ import com.alibaba.csp.sentinel.slots.block.BlockException;
  * average rt, qps, thread count of incoming requests into account. And it also
  * provides a measurement of system's load, but only available on Linux.
  * </p>
+ * 输入流量管理
  * <p>
  * rt, qps, thread count is easy to understand. If the incoming requests'
  * rt,qps, thread count exceeds its threshold, the requests will be
@@ -283,7 +284,7 @@ public final class SystemRuleManager {
 
     /**
      * Apply {@link SystemRule} to the resource. Only inbound traffic will be checked.
-     *
+     *  应用对应的SystemRule到资源上，检查对应的qps，rt等
      * @param resourceWrapper the resource.
      * @throws BlockException when any system rule's threshold is exceeded.
      */

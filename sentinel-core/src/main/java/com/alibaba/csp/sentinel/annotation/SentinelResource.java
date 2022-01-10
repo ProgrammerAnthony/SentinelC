@@ -21,7 +21,7 @@ import java.lang.annotation.*;
 
 /**
  * The annotation indicates a definition of Sentinel resource.
- * sentinel核心注解类
+ * sentinel核心注解类，通过AOP解析
  * @author Eric Zhao
  * @author zhaoyuguang
  * @since 0.1.1
