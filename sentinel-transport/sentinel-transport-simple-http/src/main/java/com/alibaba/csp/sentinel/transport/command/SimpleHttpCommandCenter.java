@@ -83,7 +83,7 @@ public class SimpleHttpCommandCenter implements CommandCenter {
                     throw new RejectedExecutionException();
                 }
             });
-
+        //初始化线程
         Runnable serverInitTask = new Runnable() {
             int port;
 
@@ -188,6 +188,7 @@ public class SimpleHttpCommandCenter implements CommandCenter {
                     socket = this.serverSocket.accept();
                     setSocketSoTimeout(socket);
                     HttpEventTask eventTask = new HttpEventTask(socket);
+                    //交给业务线程池执行
                     bizExecutor.submit(eventTask);
                 } catch (Exception e) {
                     CommandCenterLog.info("Server error", e);
