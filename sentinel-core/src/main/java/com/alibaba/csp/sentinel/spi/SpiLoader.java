@@ -106,7 +106,7 @@ public final class SpiLoader<S> {
     /**
      * Create SpiLoader instance via Service class
      * Cached by className, and load from cache first
-     *
+     * 加载对应的class信息到缓存并获取
      * @param service Service class
      * @param <T>     Service type
      * @return SpiLoader instance
@@ -151,7 +151,7 @@ public final class SpiLoader<S> {
 
     /**
      * Load all Provider instances of the specified Service
-     *
+     *  spi加载指定服务数据
      * @return Provider instances list
      */
     public List<S> loadInstanceList() {
@@ -317,6 +317,7 @@ public final class SpiLoader<S> {
 
         String fullFileName = SPI_FILE_PREFIX + service.getName();
         ClassLoader classLoader;
+        // 默认先使用自己的classloader，再使用系统的classloader
         if (SentinelConfig.shouldUseContextClassloader()) {
             classLoader = Thread.currentThread().getContextClassLoader();
         } else {
@@ -462,7 +463,7 @@ public final class SpiLoader<S> {
 
     /**
      * Create Provider instance
-     *
+     * 获取缓存中的class，并更具service是否是单例进行创建
      * @param clazz     class type of Provider
      * @param singleton if instance is singleton or prototype
      * @return Provider instance

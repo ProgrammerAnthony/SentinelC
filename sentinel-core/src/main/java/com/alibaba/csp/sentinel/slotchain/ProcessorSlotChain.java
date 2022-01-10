@@ -17,6 +17,7 @@ package com.alibaba.csp.sentinel.slotchain;
 
 /**
  * Link all processor slots as a chain.
+ * 继承自{@link AbstractLinkedProcessorSlot}(AbstractLinkedProcessorSlot提供了单链表能力)
  *
  * @author qinan.qn
  */

@@ -43,7 +43,7 @@ public final class InitExecutor {
             return;
         }
         try {
-            //将InitFunc的实现添加到initList中，分别调用其init方法
+            //将InitFunc的实现添加到initList中，分别调用其init方法，为程序提供了拓展点
             List<InitFunc> initFuncs = SpiLoader.of(InitFunc.class).loadInstanceListSorted();
             List<OrderWrapper> initList = new ArrayList<OrderWrapper>();
             for (InitFunc initFunc : initFuncs) {

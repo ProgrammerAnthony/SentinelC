@@ -28,7 +28,8 @@ import java.util.List;
 
 /**
  * Builder for a default {@link ProcessorSlotChain}.
- * 使用spi机制构建ProcessorSlotChain
+ * 当前类会被spi机制加载，同时会使用spi机制加载对应的{@link ProcessorSlot}
+ * 并添加到{@link ProcessorSlotChain}（提供了processor的职责链式处理）
  * @author qinan.qn
  * @author leyou
  */

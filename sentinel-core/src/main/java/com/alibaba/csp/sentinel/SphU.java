@@ -24,6 +24,7 @@ import com.alibaba.csp.sentinel.slots.system.SystemRule;
 /**
  * <p>The fundamental Sentinel API for recording statistics and performing rule checking for resources.</p>
  * <p>
+ *     sentinel记录的核心类，dubbo，spring gateway以及我们自行定义的方法都会调用这里的api
  * Conceptually, physical or logical resource that need protection should be
  * surrounded by an entry. The requests to this resource will be blocked if any
  * criteria is met, eg. when any {@link Rule}'s threshold is exceeded. Once blocked,

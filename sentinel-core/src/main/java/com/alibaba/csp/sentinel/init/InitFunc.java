@@ -17,6 +17,7 @@ package com.alibaba.csp.sentinel.init;
 
 /**
  * @author Eric Zhao
+ * 为所有的
  */
 public interface InitFunc {
 

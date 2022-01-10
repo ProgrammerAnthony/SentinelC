@@ -28,6 +28,7 @@ import java.io.IOException;
 
 /**
  * @author zhaoyuguang
+ * 实现{@link Interceptor}，拦截对应的请求处理链
  */
 public class SentinelOkHttpInterceptor implements Interceptor {
 
@@ -51,6 +52,7 @@ public class SentinelOkHttpInterceptor implements Interceptor {
             if (StringUtil.isNotBlank(config.getResourcePrefix())) {
                 name = config.getResourcePrefix() + name;
             }
+            //所有拦截的核心处理都在SphU.entry
             entry = SphU.entry(name, ResourceTypeConstants.COMMON_WEB, EntryType.OUT);
             return chain.proceed(request);
         } catch (BlockException e) {
