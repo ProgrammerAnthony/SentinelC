@@ -30,7 +30,7 @@ import com.alibaba.csp.sentinel.slots.nodeselector.NodeSelectorSlot;
  * current context does't have one. Note that same context name will share same {@link EntranceNode}
  * globally.
  * </p>
- *
+ * 代表的是invocation tree的根节点，维度是 context，存在 ContextUtil 类的 contextNameNodeMap 里面
  * @author qinan.qn
  * @see ContextUtil
  * @see ContextUtil#enter(String, String)

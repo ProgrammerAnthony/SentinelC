@@ -30,7 +30,7 @@ import com.alibaba.csp.sentinel.util.AssertUtil;
  * and so on. Same resource shares the same {@link ClusterNode} globally, no matter in which
  * {@link com.alibaba.csp.sentinel.context.Context}.
  * </p>
- * 相同的resource对应全局相同的ClusterNode
+ * 相同的resource对应全局相同的ClusterNode,维度是 resource
  * <p>
  * To distinguish invocation from different origin (declared in
  * {@link ContextUtil#enter(String name, String origin)}),
@@ -65,6 +65,7 @@ public class ClusterNode extends StatisticNode {
      * So we didn't use concurrent map here, but a lock, as this lock only happens
      * at the very beginning while concurrent map will hold the lock all the time.
      * </p>
+     *  StatisticNode维度是 resource * origin，存在每个 ClusterNode 的 originCountMap 里面
      */
     private Map<String, StatisticNode> originCountMap = new HashMap<>();
 

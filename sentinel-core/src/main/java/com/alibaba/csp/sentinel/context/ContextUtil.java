@@ -51,6 +51,7 @@ public class ContextUtil {
 
     /**
      * Holds all {@link EntranceNode}. Each {@link EntranceNode} is associated with a distinct context name.
+     * EntranceNode 的维度是 context，存在 ContextUtil 类的 contextNameNodeMap 里面
      */
     private static volatile Map<String, DefaultNode> contextNameNodeMap = new HashMap<>();
 
@@ -86,6 +87,7 @@ public class ContextUtil {
      * The context is wrapped with {@code ThreadLocal}, meaning that each thread has it's own {@link Context}.
      * New context will be created if current thread doesn't have one.
      * </p>
+     * invocation chain的入口
      * <p>
      * A context will be bound with an {@link EntranceNode}, which represents the entrance statistic node
      * of the invocation chain. New {@link EntranceNode} will be created if
@@ -265,7 +267,7 @@ public class ContextUtil {
     /**
      * Execute the code within provided context.
      * This is mainly designed for context switching (e.g. in asynchronous invocation).
-     *
+     *  线程切换的时候会丢掉context，所以通过当前方法来变换context，（运行之后再变换回去）
      * @param context the context
      * @param f       lambda to run within the context
      * @since 0.2.0

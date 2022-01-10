@@ -49,11 +49,13 @@ class CtEntry extends Entry {
         setUpEntryFor(context);
     }
 
+    //将当前 Entry 接到传入 Context 的调用链路上
     private void setUpEntryFor(Context context) {
         // The entry should not be associated to NullContext.
         if (context instanceof NullContext) {
             return;
         }
+        //内部维护着 parent 和 child
         this.parent = context.getCurEntry();
         if (parent != null) {
             ((CtEntry) parent).child = this;
@@ -106,12 +108,13 @@ class CtEntry extends Entry {
             } else {
                 // Go through the onExit hook of all slots.
                 if (chain != null) {
+                    //遍历chain上面的所有exit操作
                     chain.exit(context, resourceWrapper, count, args);
                 }
                 // Go through the existing terminate handlers (associated to this invocation).
                 callExitHandlersAndCleanUp(context);
 
-                // Restore the call stack.
+                // Restore the call stack.恢复调用栈，退出当前节点
                 context.setCurEntry(parent);
                 if (parent != null) {
                     ((CtEntry) parent).child = null;

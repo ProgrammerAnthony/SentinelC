@@ -86,6 +86,7 @@ import com.alibaba.csp.sentinel.util.function.Predicate;
  *
  * @author qinan.qn
  * @author jialiang.linjl
+ * StatisticNode维度是 resource * origin，存在每个 ClusterNode 的 originCountMap 里面
  */
 public class StatisticNode implements Node {
 
