@@ -61,6 +61,7 @@ public class SentinelResourceAspect extends AbstractSentinelAspectSupport {
             //如果对应的slot触发流控会抛出异常，并记录数据？
             return handleBlockException(pjp, annotation, ex);
         } catch (Throwable ex) {
+            //如果是其他异常走到这里，尝试fallback逻辑
             Class<? extends Throwable>[] exceptionsToIgnore = annotation.exceptionsToIgnore();
             // The ignore list will be checked first.
             if (exceptionsToIgnore.length > 0 && exceptionBelongsTo(ex, exceptionsToIgnore)) {

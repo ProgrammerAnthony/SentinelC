@@ -24,7 +24,7 @@ package com.alibaba.csp.sentinel.property;
  * Note that not every {@link #updateValue(Object newValue)} invocation should inform the listeners, only when
  * {@code newValue} is not Equals to the old value, informing is needed.
  * </p>
- *
+ * 配置加载接口，配置更新和加载的时候会回调处理
  * @param <T> the target type.
  * @author Carpenter Lee
  */

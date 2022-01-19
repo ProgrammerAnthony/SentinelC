@@ -63,7 +63,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * Fetch metric of machines.
- *
+ * 会不断获取各个应用实例的指标数据
  * @author leyou
  */
 @Component

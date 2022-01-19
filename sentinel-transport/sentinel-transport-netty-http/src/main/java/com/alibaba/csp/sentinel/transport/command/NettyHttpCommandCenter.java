@@ -29,7 +29,7 @@ import com.alibaba.csp.sentinel.transport.CommandCenter;
 
 /**
  * Implementation of {@link CommandCenter} based on Netty HTTP library.
- *
+ * 基于Spi扩展加载机制，NettyHttpCommandCenter.java会启动一个netty server，并监听csp.sentinel.api.port配置的端口（默认8719），后面所有的监控数据都将通过此端口传输。
  * @author Eric Zhao
  */
 @Spi(order = Spi.ORDER_LOWEST - 100)

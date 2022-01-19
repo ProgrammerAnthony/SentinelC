@@ -30,7 +30,7 @@ import java.util.Map;
  * List all available command handlers by request: </br>
  * {@code curl http://ip:commandPort/api}
  * </p>
- *
+ * 相当于接口菜单，请求http://localhost:8719/api，即可返回所有可用的CommandHandler的请求url和其功能说明：
  * @author houyi
  * @since 1.5.0
  */

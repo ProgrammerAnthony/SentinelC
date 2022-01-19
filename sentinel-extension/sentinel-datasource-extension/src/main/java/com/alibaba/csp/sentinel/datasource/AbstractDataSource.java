@@ -20,7 +20,7 @@ import com.alibaba.csp.sentinel.property.SentinelProperty;
 
 /**
  * The abstract readable data source provides basic functionality for loading and parsing config.
- *
+ *  sentinel默认不提供持久化，可以通过zookeeper，redis，Nacos，file等实现持久化
  * @param <S> source data type
  * @param <T> target data type
  * @author Carpenter Lee

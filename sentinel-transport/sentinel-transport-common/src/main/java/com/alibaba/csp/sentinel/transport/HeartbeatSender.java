@@ -18,7 +18,7 @@ package com.alibaba.csp.sentinel.transport;
 /**
  * The heartbeat sender which is responsible for sending heartbeat to remote dashboard
  * periodically per {@code interval}.
- *
+ * HttpHeartbeatSender.java会初始化一个定时任务，不断向csp.sentinel.dashboard.server指定的Dashboard服务地址发送心跳信息。
  * @author leyou
  * @author Eric Zhao
  */
